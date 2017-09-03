@@ -6,10 +6,12 @@ A list of what is safe, and not safe from the y2038 Problem.
 
 
 ## Kernels
+Internal kernel timekeeping may break, timers, etc, could use a 32 bit signed timestamp, etc. 
 ### Linux
 ### Others
 
 ## Syscalls
+Kernel Syscalls that deal with time may break. 
 ### Linux
 ### Windows
 ### MacOS
@@ -72,15 +74,25 @@ A list of what is safe, and not safe from the y2038 Problem.
 | udf | u16 year | 2038|
 | isofs | 'char' year since 1900 (fixable) | 2028 | 
 | cramfs | fixed | 1970 | 
+| apfs | ??? | ??? | 
 
 Credit to: https://kernelnewbies.org/y2038/vfs for the original list [CC-By 2.5](https://creativecommons.org/licenses/by/2.5/). I have not independently verified it. 
 
 ## Core Libraries
+Core libraries like GNU CoreUtils or LibC, etc, which may have time functions that could break. 
 ### Unix
 ### Others
 
 ## Databases 
+Schema choices aside, many DBs have timestamp functions which may break. 
+
 * MySQL
 * Postgres
 * MSSSQL
 * SQLLite 
+
+## Software
+Email Servers, Calendars, Media Players... anything that uses timestamps might fall over. 
+
+## Hardware
+Is some hardware non-updatable and going to break? 
