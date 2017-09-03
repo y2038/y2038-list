@@ -73,7 +73,7 @@ A list of what is safe, and not safe from the y2038 Problem.
 | isofs | 'char' year since 1900 (fixable) | 2028 | 
 | cramfs | fixed | 1970 | 
 
-Credit to: https://kernelnewbies.org/y2038/vfs for the original list. I have not independently verified it. 
+Credit to: https://kernelnewbies.org/y2038/vfs for the original list [CC-By 2.5](https://creativecommons.org/licenses/by/2.5/). I have not independently verified it. 
 
 ## Core Libraries
 ### Unix
