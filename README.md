@@ -35,6 +35,7 @@ Kernel Syscalls that deal with time may break.
 | cifs (modern) | 64-bit 100ns since 1601 | 30328 |
 | ntfs | 64-bit 100ns since 1601 | 30828 | 
 | ext4 (new inodes) | 34 bit seconds / 30-bit ns | 2582 |
+| apfs | u64 nanoseconds | 2554 | 
 | ocfs2 | 34-bit seconds/30-bit ns | 2514| 
 | logfs | signed 64-bit ns | 2262 | 
 | adfs | 40-bit cs since 1900 | 2248 |
@@ -74,7 +75,6 @@ Kernel Syscalls that deal with time may break.
 | udf | u16 year | 2038|
 | isofs | 'char' year since 1900 (fixable) | 2028 | 
 | cramfs | fixed | 1970 | 
-| apfs | ??? | ??? | 
 
 Credit to: https://kernelnewbies.org/y2038/vfs for the original list [CC-By 2.5](https://creativecommons.org/licenses/by/2.5/). I have not independently verified it. 
 
